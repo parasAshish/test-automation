@@ -1,0 +1,18 @@
+<p-panel header="Test Automation Tool">
+  <div class="p-grid">
+    <div class="testcase-list p-col-3">
+      <h3 class="text-center">Test Suites</h3>
+      <p-tree [value]="files1" [draggableNodes]="true" [droppableNodes]="true" draggableScope="self"
+        droppableScope="self"></p-tree>
+    </div>
+    <div cdkDropList class="testcase-list p-col-3" (cdkDropListDropped)="drop($event)">
+      <h3 class="text-center">Test Cases</h3>
+      <div class="testcase-box" *ngFor="let movie of movies" cdkDrag>
+        {{movie}}
+      </div>
+    </div>
+    <div class="testcase-list p-col-3">
+      <h3 class="text-center">Test Steps</h3>
+    </div>
+  </div>
+</p-panel>
