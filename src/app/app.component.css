@@ -53,3 +53,9 @@
   .text-center {
     text-align: center;
   }
+  .hover-element {
+    display: none;
+  }
+  .testcase-box:hover .hover-element {
+    display: block;   
+}

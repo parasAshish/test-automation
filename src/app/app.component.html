@@ -7,8 +7,8 @@
     </div>
     <div cdkDropList class="testcase-list p-col-3" (cdkDropListDropped)="drop($event)">
       <h3 class="text-center">Test Cases</h3>
-      <div class="testcase-box" *ngFor="let movie of movies" cdkDrag>
-        {{movie}}
+      <div class="testcase-box" *ngFor="let movie of movies;let i=index" cdkDrag>
+        {{movie}}<span class="hover-element">Test Hover {{i+1}}</span>
       </div>
     </div>
     <div class="testcase-list p-col-3">
